@@ -31,7 +31,8 @@ end
 def reverse_string(str)
   # your code here
   reverse_string = ""
-  chars = str.each.char.to_a
-  chars.size.times { reverse_string << chars.pop }
+  str.length.times do |i|
+    reverse_string = str[i] + reverse_string
+  end
   reverse_string
 end
